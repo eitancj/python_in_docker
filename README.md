@@ -6,6 +6,7 @@ Based on the following guide:\
 https://app.pluralsight.com/guides/python-tricks-introduction
 
 ### Pre-installed on your machine
+- Git
 - Docker
 
 *Tip*: One of the simplest ways is using Docker Desktop:\
@@ -36,7 +37,7 @@ docker run -d --rm -p 8501:8501 --name streamlit_ctr streamlit:V1
 ```
 ** make sure no other running process is using that port on your machine
 
-4. test app
+4. test app\
 *http://localhost:8501* from your web browser
 
 5. stop (and remove) container when your done
@@ -44,9 +45,9 @@ docker run -d --rm -p 8501:8501 --name streamlit_ctr streamlit:V1
 docker container stop streamlit_ctr
 ```
 
-6. remove the created images (optionally)
+6. remove the created image
 ```
-docker rmi streamlit:V1 python:3.11.4-slim-bookworm
+docker rmi streamlit:V1
 ```
 
 
