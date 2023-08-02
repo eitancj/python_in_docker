@@ -16,12 +16,11 @@ https://www.docker.com/products/docker-desktop/
 - Streamlit
 - Debian
 
-
 ### Running the App
 ** tested on Mac OS
 
 1. pull git repo\
---> git clone https://github.com/eitancj/streamlitApp.git
+--> git clone https://github.com/eitancj/streamlit_app.git
 
 2. build image\
 --> docker build -t streamlit:V1 .
