@@ -7,7 +7,6 @@ https://app.pluralsight.com/guides/python-tricks-introduction
 
 ### Pre-installed on your machine
 - Docker
-- Docker Compose
 
 *Tip*: One of the simplest ways is using Docker Desktop:\
 https://www.docker.com/products/docker-desktop/
@@ -15,6 +14,8 @@ https://www.docker.com/products/docker-desktop/
 - Python 3
 - Pip 3
 - Streamlit
+- Debian
+
 
 ### Running the App
 ** tested on Mac OS
@@ -40,5 +41,5 @@ https://www.docker.com/products/docker-desktop/
 --> docker rmi streamlit:V1 python:3.11.4-slim-bookworm
 
 **Alternatively**, a pre-built image can be found at:\
-???\
-In that case start at step 3
+docker pull eitancj/streamlit_app:V1
+In that case start at step 3, after having pulled the image
