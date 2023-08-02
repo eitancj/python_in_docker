@@ -35,7 +35,7 @@ docker build -t streamlit:V1 .
 ```
 docker run -d --rm -p 8501:8501 --name streamlit_ctr streamlit:V1
 ```
-** make sure no other running process is using that port on your machine
+  ** make sure no other running process is using that port on your machine
 
 4. test app\
 *http://localhost:8501* from your web browser
@@ -49,6 +49,12 @@ docker container stop streamlit_ctr
 ```
 docker rmi streamlit:V1
 ```
+
+7. clean up local copy (unless you want to keep it)
+```
+cd .. && rm -rf streamlit_app
+```
+  ** be prudent with 'rm -rf'. Make sure you're in the right directory and aiming at the right folder.
 
 
 **Alternatively**, skip steps 1-2 by pulling a pre-built image:\
