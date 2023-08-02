@@ -37,9 +37,7 @@ docker run -d --rm -p 8501:8501 --name streamlit_ctr streamlit:V1
 ** make sure no other running process is using that port on your machine
 
 4. test app
-```
-go to *localhost:8501* from your web browser
-```
+*http://localhost:8501* from your web browser
 
 5. stop (and remove) container when your done
 ```
@@ -50,6 +48,7 @@ docker container stop streamlit_ctr
 ```
 docker rmi streamlit:V1 python:3.11.4-slim-bookworm
 ```
+
 
 **Alternatively**, skip steps 1-2 by pulling a pre-built image:\
 docker pull eitancj/streamlit_app:V1
