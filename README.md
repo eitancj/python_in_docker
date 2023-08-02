@@ -26,7 +26,7 @@ cd streamlit_app
 ```
 
 2. build image
-``
+```
 docker build -t streamlit:V1 .
 ```
 
