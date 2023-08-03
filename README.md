@@ -41,14 +41,14 @@ docker run -d --rm -p 8501:8501 --name streamlit_ctr streamlit_app:V1
 4. test app\
 *http://localhost:8501* from your web browser
 
-5. stop (and remove) container when your done
+5. gracefully stop (and remove) container when your done
 ```
 docker container stop streamlit_ctr
 ```
 
 6. remove the created image
 ```
-docker rmi streamlit:V1
+docker rmi streamlit_app:V1
 ```
 
 7. clean up local copy (unless you want to keep it)
