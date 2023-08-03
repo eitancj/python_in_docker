@@ -42,7 +42,7 @@ docker run -d --rm -p 8501:8501 --name streamlit_ctr streamlit_app:V1
 4. test app\
 *http://localhost:8501* from your web browser
 
-5. gracefully stop (and remove) container when your done
+5. gracefully stop (and remove) container when you're done
 ```
 docker container stop streamlit_ctr
 ```
