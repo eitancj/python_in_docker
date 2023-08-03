@@ -28,7 +28,7 @@ cd streamlit_app
 
 2. build image
 ```
-docker build -t streamlit:V1 .
+docker build -t streamlit_app:V1 .
 ```
 ** may take a few minutes: Streamlit is relatively heavy
 
