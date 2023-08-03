@@ -33,9 +33,9 @@ docker build -t streamlit:V1 .
 
 3. run app
 ```
-docker run -d --rm -p 8501:8501 --name streamlit_ctr streamlit:V1
+docker run -d --rm -p 8501:8501 --name streamlit_ctr streamlit_app:V1
 ```
-  ** make sure no other running process is using that port on your machine
+** make sure no other running process is using that port on your machine
 
 4. test app\
 *http://localhost:8501* from your web browser
@@ -54,8 +54,4 @@ docker rmi streamlit:V1
 ```
 cd .. && rm -rf streamlit_app
 ```
-  ** be prudent with 'rm -rf'. Make sure you're in the right directory and aiming at the right folder.
-
-
-**Alternatively**, skip steps 1-2 by pulling a pre-built image:\
-docker pull eitancj/streamlit_app:V1
+** be prudent with 'rm -rf'. Make sure you're in the right directory and aiming at the right folder.
