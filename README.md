@@ -1,5 +1,6 @@
 # Interactive Investment-Growth Calculation Web App 
 
+![](https://github.com/eitancj/preview_images/blob/main/streamlit_app_1000.png?raw=true)
 Just experimenting with building Docker images. A python app using Streamlit, in this case.
 
 Based on the following guide:\
