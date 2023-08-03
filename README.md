@@ -30,6 +30,7 @@ cd streamlit_app
 ```
 docker build -t streamlit:V1 .
 ```
+** may take a few minutes: Streamlit is relatively heavy
 
 3. run app
 ```
