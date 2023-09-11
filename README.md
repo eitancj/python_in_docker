@@ -6,7 +6,7 @@
 Just experimenting with building Docker images.  
 Containerizing a Python3-Streamlit app, in this case.
 
-Inspired by [this](https://app.pluralsight.com/guides/dockerfile-for-python-web-projects) short guide.
+Inspired by [this](https://app.pluralsight.com/guides/dockerfile-for-python-web-projects) short guide which I recommend.
 
 ### Pre-installed on your machine
 - Git
