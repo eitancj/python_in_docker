@@ -47,7 +47,7 @@ docker run -d --rm -p 8501:8501 --name pydock python_in_docker:V1
 # Make sure no other running process is using that port on your machine
 ```
 
-5. Test app\
+5. Test app
 ```
 open http://localhost:8501 # will open in your default web browser
 
