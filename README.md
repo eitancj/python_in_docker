@@ -1,61 +1,74 @@
-# Interactive Investment-Growth Calculation Web App 
+# Using Docker to Containerize a Python App 
 
 ![](https://github.com/eitancj/preview_images/blob/main/streamlit_app_1000.png?raw=true)
-Just experimenting with building Docker images. A python app using Streamlit, in this case.
 
+Just experimenting with building Docker images.  
+Containerizing a Python3-Streamlit app, in this case.
+
+Inspired by [this](https://app.pluralsight.com/guides/dockerfile-for-python-web-projects) short guide.
 
 ### Pre-installed on your machine
 - Git
 - Docker
 
-*One of the simplest ways of starting to use Docker by installing:*\
+*A simple way to work with Docker images locally:*\
 https://www.docker.com/products/docker-desktop/
 
 ### Tech Stack
-- Python 3
-- Pip 3
+- Tested on macOS X
+- Python 3.11.4
 - Streamlit
-- Debian
+- Debian-based container
 
 ### Running the App
-*Tested on macOS X*
 
 1. Clone git repo & cd into it
 ```
-git clone https://github.com/eitancj/streamlit_app.git
-cd streamlit_app
+git clone https://github.com/eitancj/python_in_docker
+cd python_in_docker
 ```
 
 2. Build image
 ```
-docker build -t streamlit_app:V1 .
+docker build -t python_in_docker:V1 .
 
 # May take a few minutes: Streamlit is relatively heavy
 ```
 
-3. Run app
+3. Verify image creation   
 ```
-docker run -d --rm -p 8501:8501 --name streamlit_ctr streamlit_app:V1
+docker images python_in_docker
+```
+
+4. Run app
+```
+docker run -d --rm -p 8501:8501 --name pydock python_in_docker:V1
 
 # Make sure no other running process is using that port on your machine
 ```
 
-4. Test app\
-*http://localhost:8501* from your web browser
+5. Test app\
+```
+open http://localhost:8501 # will open in your default web browser
 
-5. Gracefully stop (and remove) container when you're done
-```
-docker container stop streamlit_ctr
-```
-
-6. Remove the created image
-```
-docker rmi streamlit_app:V1
+# Or simply copy and paste the address into your web browser
 ```
 
-7. Clean up local copy (unless you want to keep it)
+6. Gracefully stop (and remove) container when you're done
 ```
-cd .. && rm -rf streamlit_app
+docker container stop pydock
+```
 
-# Be prudent with 'rm -rf'. Make sure you're in the right directory and aiming at the right folder.
+7. Remove the created image
 ```
+docker rmi python_in_docker:V1
+```
+
+8. Clean up local copy (unless you want to keep it)
+```
+cd .. && rm -rf python_in_docker
+
+# BE PRUDENT with 'rm -rf'. Make sure you're in the right directory and aiming at the right folder.
+```
+
+9. That's it

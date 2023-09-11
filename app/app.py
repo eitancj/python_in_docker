@@ -1,31 +1,37 @@
-### Investment Growth Calculator ###
-# simple web application to practice building python-app images with Docker #
-# https://app.pluralsight.com/guides/dockerfile-for-python-web-projects #
-# latest tested Python version: 3.11.4
+###    Python App in Docker Image     ###
+# Practice containerizing a python app  #
+# using Docker with this simple web app #
+#             EitanCJ 2023              #
+#             Python 3.11.4             #
+###    --------------------------     ###
 
 
+# Modules
 import streamlit as st
 from PIL import Image
 import os
 
-origDir = os.getenv('PWD')
-
-# title
+# Title
 st.title(":snake: Python App in a Docker Image :whale:")
 st.header("\nCalculate Growth Percentage")
 
-
-initial = st.number_input("Initial Investment in US$",step=100)
+# Vars
+origDir = os.getenv('PWD')
+initial = st.number_input("Initial Investment in $US",step=100)
 yr = st.number_input("Growth Period in Years",step=1)
 growth = st.number_input("Growth Rate in %", step=0.50)
 final_val = 0
 current_val = initial
+
+## Main ## 
+
+# Calculate growth
 for year in range(int(yr)):
    current_val += (growth * current_val / 100)
    final_val = current_val
 
-# perform cashflow projections for the next 5 years
-st.write(f'{initial}$, after {int(yr)} years and at a fixed growth rate \
+# Predict capital growth based on user input
+st.write(f'${initial}, after {int(yr)} years and at a fixed growth rate \
          of {growth}%, becomes:')
 st.write(f':money_with_wings: **:green[{final_val:,.2f}]** :money_with_wings:')
 
@@ -36,10 +42,9 @@ hide_streamlit_style = """
             footer {visibility: hidden;}
             </style>
             """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)  # https://github.com/streamlit/streamlit/issues/892
 
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) #https://github.com/streamlit/streamlit/issues/892
-
-# print random gummy bears
+# Display random gummy bears image
 jpgFile = os.path.join(origDir,'aux/gummy_bears.jpg')
 try:
     bears = Image.open(jpgFile)

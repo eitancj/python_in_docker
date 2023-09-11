@@ -13,16 +13,16 @@ ENV PYTHONUNBUFFERED 1
 # copy app folder
 COPY app .
 
-# set user to run the app | Alpine
-#RUN apk add doas; \ ##commented because the streamlit python package doesn't work on Alpine Linux
-#    addgroup -S appgrp; \
-#    adduser -D -S -h $AppDir --shell /bin/sh -G appgrp appusr; \
-#    echo 'permit nopass :appgrp as root' > /etc/doas.d/doas.conf
-
 # set user to run the app | Debian
 ARG usrHome=/home/appusr
 RUN addgroup --system appgrp ;\
     adduser --system --shell /bin/bash --home $usrHome --ingroup appgrp appusr
+    
+# set user to run the app | Alpine
+# RUN apk add doas; \ ##commented because the streamlit python package doesn't work on Alpine Linux
+    # addgroup -S appgrp; \
+    # adduser -D -S -h $AppDir --shell /bin/sh -G appgrp appusr; \
+    # echo 'permit nopass :appgrp as root' > /etc/doas.d/doas.conf
 
 # grant ownership to appusr over the app folder
 RUN chown -R appusr:appgrp $AppDir
