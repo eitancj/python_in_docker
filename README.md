@@ -1,7 +1,8 @@
-# Using Docker to Containerize a Python App 
+# Using Docker to Containerize a Python App
 
 ![](https://github.com/eitancj/preview_images/blob/main/streamlit_app_1000.png?raw=true)
 
+\
 Just experimenting with building Docker images.  
 Containerizing a Python3-Streamlit app, in this case.
 
@@ -68,7 +69,8 @@ docker rmi python_in_docker:V1
 ```
 cd .. && rm -rf python_in_docker
 
-# BE PRUDENT with 'rm -rf'. Make sure you're in the right directory and aiming at the right folder.
+# BE PRUDENT WITH 'rm -rf'.
+# Make sure you're in the right directory and aiming at the right folder.
 ```
 
 9. That's it

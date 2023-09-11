@@ -17,7 +17,7 @@ st.header("\nCalculate Growth Percentage")
 
 # Vars
 origDir = os.getenv('PWD')
-initial = st.number_input("Initial Investment in $US",step=100)
+initial = st.number_input("Initial Investment in US Dollars",step=100)
 yr = st.number_input("Growth Period in Years",step=1)
 growth = st.number_input("Growth Rate in %", step=0.50)
 final_val = 0
