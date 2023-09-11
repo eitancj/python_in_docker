@@ -1,6 +1,6 @@
 # Using Docker to Containerize a Python App
 
-![](https://github.com/eitancj/preview_images/blob/main/streamlit_app_1000.png?raw=true)
+![](https://github.com/eitancj/preview_images/blob/main/python_in_docker.png?raw=true)
 
 \
 Just experimenting with building Docker images.  
